@@ -1,16 +1,17 @@
 var elm = document.getElementById('test_line');    
 
 // パラメータの取得
-var params = [];
 var param = location.search.substring(1);
-param = param.substring(param.indexOf('='));
+if(location.search.substring(1).indexOf('url=') > 0)
+{
+      param = param.substring(param.indexOf('='));
+      // パラメータの使用
+      var elm = document.getElementById('test_line');    
+      elm.textContent = param;
 
-// パラメータの使用
-var elm = document.getElementById('test_line');    
-elm.textContent = param;
-      
-var repUrl = param;
-repUrl = repUrl.replace("watch?v=", "embed/");
-repUrl = repUrl.replace("&feature=share", "");
-var iframeElm = document.getElementById('InjectionIframe');    
-iframeElm.src = repUrl;
+      var repUrl = param;
+      repUrl = repUrl.replace("watch?v=", "embed/");
+      repUrl = repUrl.replace("&feature=share", "");
+      var iframeElm = document.getElementById('InjectionIframe');    
+      iframeElm.src = repUrl;
+}
