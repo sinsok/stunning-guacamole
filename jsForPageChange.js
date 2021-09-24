@@ -7,7 +7,7 @@ if(param !== '') {
     param = param.split('&');
 }
 for(var i = 0; i < param.length; i++) {
-    params[i] = param[i].split('=');
+    params[i] = param[i].substring(param[i].indexOf('='));
 }
  
 
