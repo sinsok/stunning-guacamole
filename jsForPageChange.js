@@ -12,7 +12,7 @@ for(var i = 0; i < param.length; i++) {
  
 
 // パラメータの使用
-var target = 'pattern'
+var target = 'url'
 for(var i = 0; i < params.length; i++) {
     if(params[i][0] == target) {
         var elm = document.getElementById('test_line');    
