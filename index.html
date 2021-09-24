@@ -5,10 +5,12 @@
 <title>HTML内にPHPを記述する方法</title>
 </head>
 <body>
-<h1><?php echo 'タイトル'; ?></h1>
-<?php
-$text = "HTML内でのPHP実行処理";
-echo "<p> $text </p>";
-?>
+<h1>タイトル</h1>
+<p id="test_line">test</p>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    var elm = document.getElementById('test_line');
+    elm.textContent = 'test change';
+  </script>
 </body>
 </html>
