@@ -26,7 +26,8 @@ if(param.length > 0 )
 	else
 	{
 		//動画の処理
-		repUrl = repUrl.replace("watch?v=", "embed/");
+		repUrl = repUrl.replace("watch?v=", "embed/");		
+		repUrl = repUrl.replace("&feature=share", "");
 		elm.textContent = repUrl + '(動画)';
 	}
 
