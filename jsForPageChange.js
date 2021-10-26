@@ -17,7 +17,7 @@ if(param.length > 0 )
 	var splitAarray = param.split('list=');
 
 	//キーワードが一つでも含まれている場合
-	if(splitAarray.length > 0)
+	if(splitAarray.length > 1)
 	{
 		//プレイリストの処理
 		repUrl = 'https://www.youtube.com/embed/videoseries?list=' + splitAarray[1];
