@@ -7,6 +7,9 @@ param = param.substring(param.indexOf('=') + 1);
 if(param.length > 0 )
 {
 	// パラメータの使用
+	var bes = document.getElementById('test_base');
+	elm.textContent = param;
+	
 	var elm = document.getElementById('test_line');    
 	var repUrl = param;
 
@@ -18,14 +21,15 @@ if(param.length > 0 )
 	{
 		//プレイリストの処理
 		repUrl = 'https://www.youtube.com/embed/videoseries?list=' + splitAarray[1];
-		elm.textContent = param + '(プレイリスト)';
+		repUrl = repUrl.replace("&feature=share", "");
+		repUrl = repUrl.replace("&feature=share", "");
+		elm.textContent = repUrl + '(プレイリスト)';
 	}
 	else
 	{
 		//動画の処理
 		repUrl = repUrl.replace("watch?v=", "embed/");
-		repUrl = repUrl.replace("&feature=share", "");
-		elm.textContent = param + '(動画)';
+		elm.textContent = repUrl + '(動画)';
 	}
 
 	var iframeElm = document.getElementById('InjectionIframe');    
