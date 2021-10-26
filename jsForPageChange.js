@@ -8,7 +8,7 @@ if(param.length > 0 )
 {
 	// パラメータの使用
 	var bes = document.getElementById('test_base');
-	elm.textContent = param;
+	bes.textContent = param;
 	
 	var elm = document.getElementById('test_line');    
 	var repUrl = param;
